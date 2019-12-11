@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jon Watson</title>
+    <meta name="description" content="Personal site" />
+    <script>
+      MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+        svg: {fontCache: 'global'}
+      };
+    </script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Chalarangelo/mini.css/v2.3.4/dist/mini-default.min.css">
+  </head>
+  <body>
+    <div class="container" style="width:70%">
+      <header class="sticky">
+        <a href="#" class="logo">Jon Watson</a>
+        <a href="#" class="button hidden-sm">Home</a>
+        <a href="#" class="button hidden-sm">Articles</a>
+        <a href="#" class="button hidden-sm">Projects</a>
+        <a href="#" class="button hidden-sm">Contact</a>
+        <label for="drawer-checkbox" class="button drawer-toggle"></label>
+      </header>
+
+      <div class="row">
+        <div class="col-md col-lg">
+          <div class="tabs stacked">
+            <input type="radio" name="accordion" id="a1" checked aria-hidden="true">
+            <label for="a1" aria-hidden="true">Accordion section 1</label>
+            <div>
+              <h3>Section 1</h3>
+              <p>This is the first accordion section's content.</p>
+            </div>
+            <input type="radio" name="accordion" id="a2"aria-hidden="true">
+            <label for="a2" aria-hidden="true">Accordion section 2</label>
+            <div>
+              <h3>Section 2</h3>
+              <p>This is the second accordion section's content.</p>
+            </div>
+          </div>
+
+          <div class="tabs stacked">
+            <input type="checkbox" id="c1" aria-hidden="true">
+            <label for="c1" aria-hidden="true">Collapse section 1</label>
+            <div>
+              <p>This is the first collapse section's content.</p>
+            </div>
+            <input type="checkbox" id="c2" aria-hidden="true">
+            <label for="c2" aria-hidden="true">Collapse section 2</label>
+            <div>
+              <p>This is the second collapse section's content.</p>
+            </div>
+          </div>
+        <div class="col-md-4 col-lg-3 hidden-sm">
+          <ul class="recent">
+          
+            <li>
+              <div class="title"><a href="articles\init.html">Article title</a> &lt;Dec-11-2019&gt;</div>
+            </li>
+          
+            <li>
+              <div class="title"><a href="articles\second.html">Article title</a> &lt;Dec-11-2019&gt;</div>
+            </li>
+          
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Footer text</p>
+    </footer>
+  </body>
+</html>
