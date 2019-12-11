@@ -9,7 +9,7 @@
     "update": "nodemon -e * --watch ./src --watch ./templates index.js",
     "server": "cd build && reload build -b",
     "dev": "concurrently \"npm:update\" \"npm:server\" ",
-    "deploy":"gh-pages -d build",
+    "deploy":"gh-pages -d build -b \"master\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
