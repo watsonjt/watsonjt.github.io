@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ site.name }}</title>
-    <meta name="description" content="{{ site.description }}" />
+    <title>Jon Watson</title>
+    <meta name="description" content="Personal site" />
     <script>
       MathJax = {
         tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
@@ -17,7 +17,7 @@
   <body>
     <div class="container" style="width:70%">
       <header class="sticky">
-        <a href="#" class="logo">{{ site.name }}</a>
+        <a href="#" class="logo">Jon Watson</a>
         <a href="#" class="button hidden-sm">Home</a>
         <a href="#" class="button hidden-sm">Articles</a>
         <a href="#" class="button hidden-sm">Projects</a>
@@ -56,11 +56,15 @@
           </div>
         <div class="col-md-4 col-lg-3 hidden-sm">
           <ul class="recent">
-          {% for article in articles %}
+          
             <li>
-              <div class="title"><a href="{{ article.path | replace("md","html") }}">{{ article.title }}</a> &lt;{{moment(article.data).format("MMM-DD-YYYY")}}&gt;</div>
+              <div class="title"><a href="articles\init.html">Article title</a> &lt;Dec-11-2019&gt;</div>
             </li>
-          {% endfor %}
+          
+            <li>
+              <div class="title"><a href="articles\second.html">Article title</a> &lt;Dec-11-2019&gt;</div>
+            </li>
+          
           </ul>
         </div>
       </div>
