@@ -14,20 +14,38 @@
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>  
+      header, main, footer {
+        padding-left: 300px;
+      }
+
+      @media only screen and (max-width : 992px) {
+        header, main, footer {
+          padding-left: 0;
+        }
+      }
+    </style>
     <script type="text/javascript">
       M.AutoInit();
     </script>
   </head>
   <body>
-
-    <div class="container" style="width:70%">
+    <header>
       <ul id="slide-out" class="sidenav sidenav-fixed">
-        <li><a href="#!">First Sidebar Link</a></li>
-        <li><a href="#!">Second Sidebar Link</a></li>
+        <li class="github-card" data-github="neighbrum" data-width="400" data-height="150" data-theme="default"></li>
+        <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+        <li><a href="#!">Articles</a></li>
+        <li><a href="#!">Notes</a></li>
+        <li><a href="#!">Projects</a></li>
+        <li><a href="#!">Contact</a></li>
       </ul>
       <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
+    </header>
+    
+    <main>
+      should be viewable
+    </main>
 
     <footer>
       <p>Footer text</p>
