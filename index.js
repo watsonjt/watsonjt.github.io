@@ -6,7 +6,8 @@ var metalsmith = require("metalsmith"),
     inplace = require('metalsmith-in-place'),
     ignore = require('metalsmith-ignore'),
     nunjucks = require('nunjucks'),
-    moment = require('moment')
+    moment = require('moment'),
+    cp = require('cp-file')
 
 var nunjucksEnv = nunjucks.configure()
 nunjucksEnv.addGlobal("moment",moment)
@@ -36,11 +37,15 @@ nunjucksEnv.addGlobal("moment",moment)
     pattern: ["*/*/*html","*/*html","*html"],
     engineOptions: nunjucksEnv
 }))
-  .build(function(err){
+  .build(async function(err){
     if(err){
       console.log(err)
     }
     else{
       console.log("build successful")
+      console.log("copying CNAME to build dir")
+      await cp('CNAME', 'build/CNAME');
     }
   })
+
+  
