@@ -50,6 +50,24 @@
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
     <script>
+      function highlight_note(index){
+        $(`#${index}`).siblings().css({"border-color": "#C1E0FF", 
+             "border-width":"2px", 
+             "border-style":"dashed"});
+      }
+
+
+
+      $(document).ready(function(){
+          $('a') .click(function(e) {
+              if(this.href.indexOf("#") != -1)
+                highlight_note(this.href.split("#")[1])  
+          });
+
+          $('#summary').find('a').css({"text-decoration":"underline overline", "cursor":"pointer"})
+
+           
+      });
       function init(){
       }
     </script>
@@ -73,34 +91,27 @@
             <div id="banner" style="background-url('/assets/imgs/banner/0.jpg'); background-size:contain; overflow:hidden;">
               <img src="/assets/imgs/banner/0.jpg"/>
             </div>
-
-            <p>I am a software developer with interests in </p>
-<ul>
-<li>Distributed systems</li>
-<li>Networks</li>
-<li>Graph theory</li>
-<li>Energy, entropy, negentropy</li>
-<li>System dynamics</li>
-<li>Simulation</li>
-</ul>
-<p><a href="projects.html"><span class="blue-text text-lighten-2">Projects</span></a> has open source projects, as well
-as passion projects of mine. <a href="articles.html"><span class="blue-text text-lighten-2">Articles</span></a> are gists with explanations, or some application
-of research or readings I have recently done. <a href="notes.html"><span class="blue-text text-lighten-2">Notes</span></a> has book notes
-using the Cornell note taking method.</p>
-<p>The <a href="contact.html"><span class="blue-text text-lighten-2">Contact</span></a> page has my email.</p>
-<div class="divider"></div>
-<br>
-<div class="row">
-    <div class="col s1"></div>
-    <div class="col s5">
-        <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal" data-theme="light" data-vanity="jon-watson-2285b9192"><a class="LI-simple-link" href='https://www.linkedin.com/in/jon-watson-2285b9192?trk=profile-badge'>Jon Watson</a></div>
-    </div>
-    <div class="col s1"></div>
-    <div class="col s5 hide-on-med-and-down">
-        <div class="github-card" data-github="neighbrum" data-width="400" data-height="" data-theme="default"></div>
-        <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
-    </div>
-</div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col s12">
+              <h4>Notes - Pages 29-101</h4>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="1"></a>
+                <div class="col s3"></div>
+                <div class="col s8"></div>
+                <div class="col s1 hide-on-med-and-down"></div>
+            </div>
+          </div>
+          
+        
+        <div class="row">
+          <div id="summary" class="col s12 flow-text">
+            <p>Chapter 1</p>
 
           </div>
         </div>
