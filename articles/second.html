@@ -2,29 +2,92 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Article title - Jon Watson</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jon Watson</title>
     <meta name="description" content="Personal site" />
-    <script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      a:hover li {
+        border-bottom: solid #e0e0e0 1px;
+        cursor:pointer;
+      }
+      a:hover span {
+        border-bottom: solid #e0e0e0 1px;
+        cursor:pointer;
+      }
+      a{
+        text-decoration: none;
+        color: inherit;
+        cursor: auto;
+        z-index:10000;
+      }
+      a > li{
+        font-size: 2em;
+      }
+    #menu{
+      position:fixed;
+      float:left;
+      top:50%;
+      margin-left:-10%;
+      height:100%;
+      width:5%;
+    }
+    </style>
+        <script>
       MathJax = {
         tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
         svg: {fontCache: 'global'}
       };
     </script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mini.css/3.0.1/mini-default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>
+      function init(){
+      }
+    </script>
   </head>
-  <body>
-    <article>
-      <h1>Article title</h1>
-      <div class="meta">
-          Published: Tue Oct 22 2019 18:00:00 GMT-0600 (Mountain Daylight Time)
-      </div>
-      <div>
-        one sentence summary
-      </div>
-      <h2 id="spooky-action-at-a-distance">Spooky Action at a Distance</h2>
-<p>Some text here.</p>
+  <body onload="init()">
+    
+    <main>
+      <div class="container">
+        <div id="menu" class="hide-on-med-and-down">
+    <ul>
+        <a href="about.html" class="blue-text text-lighten-2"><li>About</li></a>
+        <a href="projects.html"><li>Projects</li></a>
+        <a href="articles.html"><li>Articles</li></a>
+        <a href="notes.html"><li>Notes</li></a>
+        <a href="contact.html"><li>Contact</li></a>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger hide show-on-small"><i class="material-icons">menu</i></a>
+</div>
+        <div class="row">
+          <div class="col s12 flow-text">
+            <div id="banner" style="background-url('/assets/imgs/banner/0.jpg'); background-size:contain; overflow:hidden;">
+              <img src="/assets/imgs/banner/0.jpg"/>
+            </div>
 
-    </article>
+            
+              <li>Article title</li>
+              <li>articles\second.md</li>
+            
+              <li>Article title</li>
+              <li>articles\init.md</li>
+            
+          </div>
+        </div>
+    </div>
+  </main>
+
+    <footer>
+      
+    </footer>
   </body>
 </html>
