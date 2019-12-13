@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jon Watson</title>
+    <meta name="description" content="Personal site" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      a:hover li {
+        border-bottom: solid #e0e0e0 1px;
+        cursor:pointer;
+      }
+      a:hover span {
+        border-bottom: solid #e0e0e0 1px;
+        cursor:pointer;
+      }
+      a{
+        text-decoration: none;
+        color: inherit;
+        cursor: auto;
+        z-index:10000;
+      }
+      a > li{
+        font-size: 2em;
+      }
+    #menu{
+      position:fixed;
+      float:left;
+      top:50%;
+      margin-left:-10%;
+      height:100%;
+      width:5%;
+    }
+    </style>
+        <script>
+      MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+        svg: {fontCache: 'global'}
+      };
+    </script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>
+      function init(){
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    
+    <main>
+      <div class="container">
+        <div id="menu" class="hide-on-med-and-down">
+    <ul>
+        <a href="/index.html" class="blue-text text-lighten-2"><li>About</li></a>
+        <a href="/projects.html"><li>Projects</li></a>
+        <a href="/articles.html"><li>Articles</li></a>
+        <a href="/notes.html"><li>Notes</li></a>
+        <a href="/contact.html"><li>Contact</li></a>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger hide show-on-small"><i class="material-icons">menu</i></a>
+</div>
+        <div class="row">
+          <div class="col s12 flow-text">
+            <div id="banner" style="background-url('/assets/imgs/banner/0.jpg'); background-size:contain; overflow:hidden;">
+              <img src="/assets/imgs/banner/0.jpg"/>
+            </div>
+            <h2>test article again <span style="font-size: 0.5em; font-style: italic;">by Jon Watson</span></h2>
+            <div>Oct 23, 2019</div>
+            <div class="col s12" style="border-bottom: solid #0e0e0e 2px"></div>
+            <h4 id="spooky-action-at-a-distance">Spooky Action at a Distance</h4>
+<p>Some text here.</p>
+
+          </div>
+        </div>
+    </div>
+  </main>
+
+    <footer>
+      
+    </footer>
+  </body>
+</html>
