@@ -17,7 +17,8 @@
     
     <main>
       <div class="container">
-        {% include "templates/partials/menu.njk" %}
+        {% import "templates/partials/menu.njk" as menu %}
+        {{ menu.getMenu(1) }}
         <div class="row">
           <div class="col s12 flow-text">
             {% include "templates/partials/banner.njk" %}

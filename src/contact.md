@@ -1,4 +1,4 @@
 ---
-layout: index.njk
+layout: contact.njk
 ---
 ### Email jon at jonwatson period dev
