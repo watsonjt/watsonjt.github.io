@@ -1,6 +1,6 @@
 ---
-title: "Article title"
-date: 2019-10-23
+title: "test article again"
+date: 2019-10-24
 description: covers some information on a topic
 blurb: one sentence summary
 ---

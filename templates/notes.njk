@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.name }}</title>
+    <meta name="description" content="{{ site.description }}" />
+
+    {% include "templates/partials/styles.njk" %}
+    {% include "templates/partials/scripts.njk" %}
+    <script>
+      function init(){
+        M.AutoInit();
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    
+    <main>
+      <div class="container">
+        {% include "templates/partials/menu.njk" %}
+        <div class="row">
+          <div class="col s12 flow-text">
+            {% include "templates/partials/banner.njk" %}
+            {% set noteDict = getNoteDict(books) %}
+            <h4>Books</h4>
+            <ul class="collapsible">
+            {% for entry in noteDict %}
+                 <li>
+                    <div class="collapsible-header"><i class="material-icons">notes</i>{{ entry.title }}</div>
+                    <div class="collapsible-body"><span>
+                        <h6>Pages - </h6>
+                        <ul style="margin-left:2%;">
+                        {% for note in entry.data %}
+                            <li ><a style="cursor:pointer" href='{{ note.path | replace("md","html")}}'>{{ note.pages }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </span></div>
+                </li>
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+    </div>
+  </main>
+
+    <footer>
+      
+    </footer>
+  </body>
+</html>
