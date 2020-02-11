@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jon Watson</title>
+    <meta name="description" content="Personal site" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+      a:hover li {
+        border-bottom: solid #e0e0e0 1px;
+        cursor:pointer;
+      }
+      a:hover span {
+        border-bottom: solid #e0e0e0 1px;
+        cursor:pointer;
+      }
+      a{
+        text-decoration: none;
+        color: inherit;
+        cursor: auto;
+        z-index:10000;
+      }
+      a > li{
+        font-size: 2em;
+      }
+    #menu{
+      position:fixed;
+      float:left;
+      top:50%;
+      margin-left:-10%;
+      height:100%;
+      width:5%;
+    }
+    </style>
+        <script>
+      MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+        svg: {fontCache: 'global'}
+      };
+    </script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script>
+      function highlight_note(index){
+        $(`#${index}`).siblings().css({"border-color": "#C1E0FF", 
+             "border-width":"2px", 
+             "border-style":"dashed"});
+      }
+
+
+
+      $(document).ready(function(){
+          $('a') .click(function(e) {
+              if(this.href.indexOf("#") != -1)
+                highlight_note(this.href.split("#")[1])  
+          });
+
+          $('#summary').find('a').css({"text-decoration":"underline overline", "cursor":"pointer"})
+
+           
+      });
+      function init(){
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    
+    <main>
+      <div class="container">
+        
+        
+<div id="menu" class="hide-on-med-and-down">
+    <ul>
+        <a href="/index.html" ><li>About</li></a>
+        <a href="/projects.html" ><li>Projects</li></a>
+        <a href="/articles.html" ><li>Articles</li></a>
+        <a href="/notes.html" class="blue-text text-lighten-2"><li>Notes</li></a>
+        <a href="/contact.html" ><li>Contact</li></a>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger hide show-on-small"><i class="material-icons">menu</i></a>
+</div>
+
+        <div class="row">
+          <div class="col s12 flow-text">
+            <div id="banner" style="background-url('/assets/imgs/banner/0.jpg'); background-size:contain; overflow:hidden;">
+              <img src="/assets/imgs/banner/0.jpg"/>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col s12">
+              <h4>Notes - Pages 151-193</h4>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="1"></a>
+                <div class="col s3">Turing Machine conf</div>
+                <div class="col s8">As a Turing machine computes, changes occur in the current state, the current tape contents, and the current head location. A setting of these three items is called a configuration of the Turing machine</div>
+                <div class="col s1 hide-on-med-and-down">168</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="2"></a>
+                <div class="col s3">Types of configurations</div>
+                <div class="col s8">Start, accept, reject configurations... the latter two are halt configurations. A turing machine accepts if there is a incremental series of configurations from the starting configuration to a accepting configuration</div>
+                <div class="col s1 hide-on-med-and-down">169</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="3"></a>
+                <div class="col s3">Deciders</div>
+                <div class="col s8">A Turing Machine that rejects on all inputs is called a Decider because it does not loop, thus it can never loop indefinetly and will always enter a halting state.</div>
+                <div class="col s1 hide-on-med-and-down">170</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="4"></a>
+                <div class="col s3">Invariant TM models</div>
+                <div class="col s8">invariance to certain changes in the definition, proved by showing that one can simulate the other. Remarkably, all models with unrestricted access to infinite memory turn out to be equivalent in power, so long as they satisfy reasonable requirements (see pg 181)</div>
+                <div class="col s1 hide-on-med-and-down">176</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="5"></a>
+                <div class="col s3">ND-TM === D-TM</div>
+                <div class="col s8">Similar to DFA === NFA, interesting given the similarity to PDA</div>
+                <div class="col s1 hide-on-med-and-down">178</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="6"></a>
+                <div class="col s3">TM descriptions categories</div>
+                <div class="col s8">formal (6 tuple), implementation: use english to describe how a TM head and tape changes, high-level english psuedo-code/algorithm description</div>
+                <div class="col s1 hide-on-med-and-down">185-186&quot;&quot;</div>
+            </div>
+          </div>
+          
+        
+        <div class="row">
+          <div id="summary" class="col s12 flow-text">
+            
+          </div>
+        </div>
+    </div>
+  </main>
+
+    <footer>
+      
+    </footer>
+  </body>
+</html>
