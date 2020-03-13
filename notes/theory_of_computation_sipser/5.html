@@ -105,14 +105,19 @@
         
         <div class="row">
           <div id="summary" class="col s12 flow-text">
-            <ul>
-<li>Decidability (Ch 4)<ul>
+            <style>
+ ul > li{
+   list-style-type: circle !important; 
+ }
+</style>
+<h4 id="decidability-ch-4">Decidability (Ch 4)</h4>
+<ul>
 <li>Simulate on a Turing Machine the previous chapters concepts, FA/PDA</li>
 <li>if the TM finishes on a halting state, accept or reject, i.e. it is decidable.</li>
 </ul>
-</li>
+<ul>
+<li>Decidable languages / machines and their constructions...</li>
 </ul>
-<p><strong>Decidable languages / machines and their constructions...</strong></p>
 <ol>
 <li>Simulate a DFA by encoding the machine on the tape with the input string to run it on</li>
 <li>Simulate a NFA by converting it to a DFA, repeat 1.</li>
@@ -126,8 +131,8 @@
 <li>Simluating a TM on a TM is not decidable, but is recognizable. Half the halting problem, only accept halt state.</li>
 <li>A decidable language and its complement are turing recognizable, therefore the language of TM does not have a turing recognizable compliment.</li>
 </ul>
+<h4 id="reducibility-ch-5">Reducibility (Ch 5)</h4>
 <ul>
-<li>Reducibility (Ch 5)</li>
 <li>TM equivalents of 1-4 above are undecidable due to halting problem.</li>
 <li>A linear bounded automaton is a TM that has only the memory equal to its input which can be padded, due to this it has a finite number of configurations and thus is a decidable turing machine.</li>
 <li>Map reducible turing machines relate two turing machines through a function applied to the reconigzed string of one machine as a recognized string of the second machine.<ul>
@@ -135,12 +140,12 @@
 </ul>
 </li>
 </ul>
-<p>Chapter 6</p>
+<h4 id="chapter-6">Chapter 6</h4>
 <ul>
 <li>recursion theorem - a TM can read its own description, load itself, run, and repeat the process.</li>
 <li>definition of information - smallest possible representation, the author constructs a TM encoded on a tape that when ran leaves only the information on the tape</li>
 </ul>
-<p>Chapter 7 &amp; 8</p>
+<h4 id="chapter-7--8">Chapter 7 &amp; 8</h4>
 <ul>
 <li>P is solvable/decidable in polynomial time on a deterministic turing machine</li>
 <li>NP is solvable in polynomial time in a non-deterministic turing machine<ul>
