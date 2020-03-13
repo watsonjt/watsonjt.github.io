@@ -105,7 +105,55 @@
         
         <div class="row">
           <div id="summary" class="col s12 flow-text">
-            <p>This chapter introduced the basics of turing machines, the important concepts include what is turing decidable, turing recognizable, non-deterministic turing machines have the same computing ability as deterministic turing machines. The variants of turing machines with unrestricted access to infinite memory under reasonable requirements (only one specified was finite work in single step) are equivalent in power regardless of variant.</p>
+            <ul>
+<li>Decidability (Ch 4)<ul>
+<li>Simulate on a Turing Machine the previous chapters concepts, FA/PDA</li>
+<li>if the TM finishes on a halting state, accept or reject, i.e. it is decidable.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Decidable languages / machines and their constructions...</strong></p>
+<ol>
+<li>Simulate a DFA by encoding the machine on the tape with the input string to run it on</li>
+<li>Simulate a NFA by converting it to a DFA, repeat 1.</li>
+<li>Simulate a regular language by building the NFA, encode it on the TM tape and input string to recognize</li>
+<li>Emptiness TM checks if a FA accepts any strings at all, if it ever accepts then reject, otherwise accept</li>
+<li>Test if two DFAs are equal, construct a DFA s.t. the recognized language is the symmetric difference of the two input DFAs. If this DFA is empty then the two input DFAs are equal.</li>
+<li>Both CFG and CFLs are decidable, but same technique to test equality of grammars fails.</li>
+</ol>
+<p><strong>Undecidablity</strong></p>
+<ul>
+<li>Simluating a TM on a TM is not decidable, but is recognizable. Half the halting problem, only accept halt state.</li>
+<li>A decidable language and its complement are turing recognizable, therefore the language of TM does not have a turing recognizable compliment.</li>
+</ul>
+<ul>
+<li>Reducibility (Ch 5)</li>
+<li>TM equivalents of 1-4 above are undecidable due to halting problem.</li>
+<li>A linear bounded automaton is a TM that has only the memory equal to its input which can be padded, due to this it has a finite number of configurations and thus is a decidable turing machine.</li>
+<li>Map reducible turing machines relate two turing machines through a function applied to the reconigzed string of one machine as a recognized string of the second machine.<ul>
+<li>un/decidability maps to the reduced machine</li>
+</ul>
+</li>
+</ul>
+<p>Chapter 6</p>
+<ul>
+<li>recursion theorem - a TM can read its own description, load itself, run, and repeat the process.</li>
+<li>definition of information - smallest possible representation, the author constructs a TM encoded on a tape that when ran leaves only the information on the tape</li>
+</ul>
+<p>Chapter 7 &amp; 8</p>
+<ul>
+<li>P is solvable/decidable in polynomial time on a deterministic turing machine</li>
+<li>NP is solvable in polynomial time in a non-deterministic turing machine<ul>
+<li>It is easy to verify the solution on a deterministic turing machine in polynomial time, but solutions on a deterministic turing machine as a model for a computer it takes exponential time</li>
+</ul>
+</li>
+<li>NP Complete<ul>
+<li>The set of NP problems that the non-complete problems can be reduced to.</li>
+<li>Solving on of these in polynomial time on a deterministic turing machine would prove P = NP</li>
+</ul>
+</li>
+<li>Chapter 8 looks at space limitations with similar taxonomy</li>
+</ul>
 
           </div>
         </div>
