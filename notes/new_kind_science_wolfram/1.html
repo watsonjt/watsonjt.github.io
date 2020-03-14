@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jon Watson</title>
     <meta name="description" content="Personal site" />
-
+    
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
     <style>
       a:hover li {
         border-bottom: solid #e0e0e0 1px;
@@ -35,6 +36,11 @@
       width:5%;
     }
     </style>
+    <style>
+ ul > li{
+   list-style-type: circle !important; 
+ }
+</style>
         <script>
       MathJax = {
         tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
@@ -49,6 +55,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script>
+    
+    <script>mermaid.initialize({startOnLoad:true});</script>
     <script>
       function highlight_note(index){
         $(`#${index}`).siblings().css({"border-color": "#C1E0FF", 
@@ -149,7 +158,7 @@
 <li>tag systems, sequential and cyclical</li>
 <li>symbolic systems</li>
 </ul>
-<p>The general idea is there is no inherent propertyu of a system that leads to complexity arising, there is some universal complexity needed in the initial conditions or structure of the system to generate complex behavior... it is better to keep systems as simple as needed to generate that complexity and not add unnecessary components or conditions.</p>
+<p>The general idea is there is no inherent property of a system that leads to complexity arising, there is some universal complexity needed in the initial conditions or structure of the system to generate complex behavior... it is better to keep systems as simple as needed to generate that complexity and not add unnecessary components or conditions.</p>
 
           </div>
         </div>
