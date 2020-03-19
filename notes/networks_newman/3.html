@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jon Watson</title>
+    <meta name="description" content="Personal site" />
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+    <style>
+      a:hover li {
+        border-bottom: solid #e0e0e0 1px;
+        cursor:pointer;
+      }
+      a:hover span {
+        border-bottom: solid #e0e0e0 1px;
+        cursor:pointer;
+      }
+      a{
+        text-decoration: none;
+        color: inherit;
+        cursor: auto;
+        z-index:10000;
+      }
+      a > li{
+        font-size: 2em;
+      }
+    #menu{
+      position:fixed;
+      float:left;
+      top:50%;
+      margin-left:-10%;
+      height:100%;
+      width:5%;
+    }
+    </style>
+    <style>
+ ul > li{
+   list-style-type: circle !important; 
+ }
+</style>
+        <script>
+      MathJax = {
+        tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]},
+        svg: {fontCache: 'global'}
+      };
+    </script>
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js"></script>
+    
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    <script>
+      function highlight_note(index){
+        $(`#${index}`).siblings().css({"border-color": "#C1E0FF", 
+             "border-width":"2px", 
+             "border-style":"dashed"});
+      }
+
+
+
+      $(document).ready(function(){
+          $('a') .click(function(e) {
+              if(this.href.indexOf("#") != -1)
+                highlight_note(this.href.split("#")[1])  
+          });
+
+          $('#summary').find('a').css({"text-decoration":"underline overline", "cursor":"pointer"})
+
+           
+      });
+      function init(){
+      }
+    </script>
+  </head>
+  <body onload="init()">
+    
+    <main>
+      <div class="container">
+        
+        
+<div id="menu" class="hide-on-med-and-down">
+    <ul>
+        <a href="/index.html" ><li>About</li></a>
+        <a href="/projects.html" ><li>Projects</li></a>
+        <a href="/articles.html" ><li>Articles</li></a>
+        <a href="/notes.html" class="blue-text text-lighten-2"><li>Notes</li></a>
+        <a href="/contact.html" ><li>Contact</li></a>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger hide show-on-small"><i class="material-icons">menu</i></a>
+</div>
+
+        <div class="row">
+          <div class="col s12 flow-text">
+            <div id="banner" style="background-url('/assets/imgs/banner/0.jpg'); background-size:contain; overflow:hidden;">
+              <img src="/assets/imgs/banner/0.jpg"/>
+            </div>
+          </div>
+        </div>
+          <div class="row">
+            <div class="col s12">
+              <h4>Notes - Pages 159-209</h4>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="1"></a>
+                <div class="col s3">Centrality</div>
+                <div class="col s8">degree centrality - simple count of edges. Eigenvector centrality - proportional centrality related to the neighbors of a node, for positive centrality scores the largest eigenvector is used $Ax = \kappa x$ with $\kappa$ equal to largest eigenvalue which we know exists due to the Perron-Frobenius theorem. Cant use eigenvector centrality on acyclic graphs -&gt; 0.</div>
+                <div class="col s1 hide-on-med-and-down">160</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="2"></a>
+                <div class="col s3">Katz Centrality</div>
+                <div class="col s8">set the eigenvector centrality so that no node has zero centrality thus it wont zero out connected nodes. Linearize the eigenvector sum.</div>
+                <div class="col s1 hide-on-med-and-down">164</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="3"></a>
+                <div class="col s3">PageRanke Centrality</div>
+                <div class="col s8">Katz, divided by the max(out edge count, 1).</div>
+                <div class="col s1 hide-on-med-and-down">166</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="4"></a>
+                <div class="col s3">Authorities and Hubs - definitions</div>
+                <div class="col s8">authorities - nodes that contain useful information, hubs point to authorities.</div>
+                <div class="col s1 hide-on-med-and-down">168</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="5"></a>
+                <div class="col s3">Betweeness Centrality</div>
+                <div class="col s8">Measures the number of shortest paths between two nodes a node belongs to. Higher betweeness nodes are sometimes called brokers. Borgatti[76] reference.</div>
+                <div class="col s1 hide-on-med-and-down">175</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="6"></a>
+                <div class="col s3">k-cores and k-components</div>
+                <div class="col s8">k-cores are a relaxation technique on cliques. a core is a set of nodes such that each node is connected to alteast k-nodes in the same group. This naturally creates a set such that $core_{k+1}$ is a subset of the $k^{th}$ core into whats called a core-periphery structure. This structure is mirrored in k-components, which are components with k-paths between any two nodes.</div>
+                <div class="col s1 hide-on-med-and-down">175-183</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="7"></a>
+                <div class="col s3">clustering coeffecient (C)</div>
+                <div class="col s8">measure of transitivity in a network. If C is 1 then all components are cliques. Lattices and trees are examples of $C = 0$. A simple way to compute this measure is $\frac{number~of~triangls~*~6}{number~of~paths~of~length~2}$</div>
+                <div class="col s1 hide-on-med-and-down">175-183</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="8"></a>
+                <div class="col s3">Redudancy</div>
+                <div class="col s8">The average number of connections from the neighbors of a node to the other neighbors of the same node. The local clustering coeffecient can be calculated as a normalized version of the redundancy for a node.</div>
+                <div class="col s1 hide-on-med-and-down">188</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="9"></a>
+                <div class="col s3">Structural Stability and Clusterability</div>
+                <div class="col s8">even number of negative weights have structural stability and are clusterable</div>
+                <div class="col s1 hide-on-med-and-down">192</div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="entry flow-text">
+                <a id="10"></a>
+                <div class="col s3">Similarity</div>
+                <div class="col s8">Structural equivalence - share same neighbors, regular equivlance - neighbors themselves are similar... Structural is measured by cosine similarity (Saltons similarity) is the most used measure $\frac{n_{ij}}{\sqrt{k_ik_j}}$ where n is the common/shared neighbor count and ki and kj are the individual neighbor counts</div>
+                <div class="col s1 hide-on-med-and-down">195-197</div>
+            </div>
+          </div>
+          
+        
+        <div class="row">
+          <div id="summary" class="col s12 flow-text">
+            <p>Transitivity is if node x is connected to node y, and node y to node z, then node x is connected to node z... however the relations the edges signifiy may not hold (A friend may not know my other friend, even if it is more likely than general population).  For this reason a clique is the only graph structure that has perfect (i.e. mathematical) transitivity.</p>
+<p>Reciprocity - number of edges that two nodes link to each other over the total number of edges</p>
+<p>Associative mixing, modularity measure - if its postivie then there is associative mixing, negative disassociative mixing. Different types include scalar/ordered and degree associative mixing.</p>
+
+          </div>
+        </div>
+    </div>
+  </main>
+
+    <footer>
+      
+    </footer>
+  </body>
+</html>

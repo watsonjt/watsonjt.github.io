@@ -107,52 +107,16 @@
         </div>
           <div class="row">
             <div class="col s12">
-              <h4>Notes - Pages 102-157</h4>
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="entry flow-text">
-                <a id="1"></a>
-                <div class="col s3">Components</div>
-                <div class="col s8">strongly connected in a directed graph have bi-directional paths between any pair of nodes. In/out components are the set of reachable nodes from a specific node. Out components are the same for all nodes within the same strongly connected component.</div>
-                <div class="col s1 hide-on-med-and-down">136</div>
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="entry flow-text">
-                <a id="2"></a>
-                <div class="col s3">Independent paths</div>
-                <div class="col s8">two paths are (edge or node) independent if they do not share any edge or node. Upperbound by min degree of any two nodes, number of independent paths is called connectivity</div>
-                <div class="col s1 hide-on-med-and-down">138</div>
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="entry flow-text">
-                <a id="3"></a>
-                <div class="col s3">Mengers Theorem</div>
-                <div class="col s8">a (edge or node) cut set is a set of nodes removed to disconnect a pair of nodes. Mengers states that the minimum cut set is equal to the number of independent paths. The edge version of this theorem allows us to compute maximum flow through a network, as connectivity times the max flow rate of a single edge (assuming fixed flow). This also implies that connectivity == size of min cut set == max flow</div>
-                <div class="col s1 hide-on-med-and-down">139-140</div>
-            </div>
-          </div>
-          
-          <div class="row">
-            <div class="entry flow-text">
-                <a id="4"></a>
-                <div class="col s3">Visualization</div>
-                <div class="col s8">minimum distance squared, uses the formula $\triangle = x^TLx$ where x is a vector [xi, xj] ... the algrebraic connectivity (?) needs to be small to use this as a visualization technique</div>
-                <div class="col s1 hide-on-med-and-down">139-140</div>
+              <h4>Notes - Pages 218-275</h4>
             </div>
           </div>
           
         
         <div class="row">
           <div id="summary" class="col s12 flow-text">
-            <p>A Graph Laplacian representation is a matrix where the diagnol of i,j is the degree of node i, row sums to negate it. Has real non-negative eigenvalues.</p>
-<p>page 150 - useful for simulation projects
-<strong>Graph sparsification forms the foundation for a range of modern numerical methods for solving large systems of simultaneous linear equations.</strong></p>
+            <p>Chapter 8 discusses algorithms on graphs, run times, and representations (matrix vs adjaceny lists) which are covered in most undergraduate computer science curriculums. The betweeness algorithm that runs in $O(n^2)$ and Faugmenting Path Algorithm of Ford and Fulkerson were new topics. </p>
+<p>maximum flow—
+Augmented Path algorthm uses BFS with a simulated flow, s.t. netflow of any path has to be 1 at the end and all paths are found. This gives you the number of independent paths between two nodes, the size of the minimum cut set, and the maximum flow since these are equivalent. With slight modifications the min cut set, and independent paths can be found.</p>
 
           </div>
         </div>
